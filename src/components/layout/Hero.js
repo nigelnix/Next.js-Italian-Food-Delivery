@@ -2,7 +2,7 @@ import Image from "next/image";
 import ArrowRight from "../icons/ArrowRight";
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero mb-6">
       <div className="py-12">
         <h1 className="text-4xl font-semibold leading-12"><span className="text-primary">Italian</span> <span className="text-secondary">food</span> is... <br /> The Best!</h1>
         <p className="my-6 text-gray-500 text-sm">
@@ -13,7 +13,7 @@ export default function Hero() {
 
       <div className="relative">
         <Image
-          src={"/italian.jpg"}
+          src={"/pizza_lady.png"}
           fill
           style={{objectFit:"contain"}}
           alt={"lasagne"}
