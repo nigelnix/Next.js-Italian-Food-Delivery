@@ -6,7 +6,7 @@ import SectionHeader from "@/components/layout/SectionHeader";
 export default function Home() {
   return (
     <>
-      <Header />
+      
       <Hero />
       <HomeMenu />
       <section>
@@ -28,6 +28,11 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <section className="text-center my-8">
+        <SectionHeader title={'Contact us'} />
+        <a href="tel:+4923444556677" className="text-3xl underline text-gray-500 hover:text-gray-700">+49 234 4455 6677</a>
+      </section>
+      
     </>
   );
 }
