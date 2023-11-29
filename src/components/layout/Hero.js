@@ -25,7 +25,7 @@ export default function Hero() {
         <button className="flex items-center gap-2 bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full uppercase">Order now
         <ArrowRight />
         </button>
-        <button className="flex gap-2 text-gray-500 hover:text-gray-700 font-semibold">Learn more
+        <button className="border-0 flex gap-2 text-gray-500 hover:text-gray-700 font-semibold">Learn more
         <ArrowRight />
         </button>
       </div>
