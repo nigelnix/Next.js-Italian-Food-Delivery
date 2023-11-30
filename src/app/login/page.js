@@ -4,6 +4,7 @@ import {signIn} from "next-auth/react";
 import Link from "node_modules/next/link";
 import Image from "node_modules/next/image";
 import { useState } from "react";
+import { redirect } from "node_modules/next/navigation";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ export default function LoginPage() {
     ev.preventDefault();
     setLoginInProgress(true);
     
-    await signIn('credentials', {email, password} );
+    await signIn('credentials', {email, password, callbackUrl:'/'} );
 
     setLoginInProgress(false);
   }
@@ -43,7 +44,7 @@ export default function LoginPage() {
         <div className="my-4 text-center text-gray-500">
           Or login with provider
         </div>
-        <button className="flex gap-4 justify-center">
+        <button onClick={() => signIn('google', {callbackUrl:'/'})} className="flex gap-4 justify-center">
           {" "}
           <Image
             src={"/google-logo.png"}
